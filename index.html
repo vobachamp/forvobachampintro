@@ -106,7 +106,7 @@
         
         /* 메인 컨텐츠 - 2열 그리드 추가 */
         .content-wrapper {
-            padding: 200px 10px 100px 10px;
+            padding: 200px 10px 20px 10px;
             min-height: calc(100vh - 150px);
             position: relative;
         }
@@ -201,7 +201,7 @@
         }
         
         .article-headline {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Inter', 'Noto Sans KR', sans-serif;
             font-size: 18pt;
             font-weight: 700;
             color: #000;
@@ -330,29 +330,6 @@
         .category-law .article-badge { background: #263238; }
         .category-law .quote-section { background: linear-gradient(135deg, #37474f 0%, #455a64 100%); }
         .category-law .category-header { background: #263238; }
-        
-        /* 하단 네비게이션 */
-        .bottom-nav {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: #000;
-            padding: 15px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
-            z-index: 1001;
-        }
-        
-        .nav-button {
-            color: #fff;
-            text-decoration: none;
-            font-size: 10pt;
-            font-weight: 600;
-            text-align: center;
-        }
         
         /* 스크롤 애니메이션 */
         @keyframes fadeInUp {
@@ -2289,24 +2266,6 @@
 
     </div>
     
-    <!-- 하단 네비게이션 -->
-    <div class="bottom-nav">
-        <a href="#" class="nav-button" id="topBtn">⬆️<br>TOP</a>
-        <a href="#" class="nav-button">📚<br>목차</a>
-        <a href="#" class="nav-button">🔍<br>검색</a>
-        <a href="#" class="nav-button">⭐<br>즐겨찾기</a>
-    </div>
-    
-    <!-- Claude 외부 링크 경고 비활성화 -->
-    <style>
-        /* Claude 외부 링크 경고 모달 숨기기 */
-        [data-testid="external-link-modal"],
-        .external-link-modal,
-        .claude-external-link-warning {
-            display: none !important;
-        }
-    </style>
-    
     <script>
         // 카테고리 버튼 클릭 이벤트
         document.querySelectorAll('.category-button').forEach(button => {
@@ -2325,12 +2284,6 @@
                 // 스크롤 to top
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
-        });
-        
-        // 스크롤 to top
-        document.getElementById('topBtn').addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
 </body>
