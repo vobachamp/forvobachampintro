@@ -25,7 +25,7 @@
         /* 신문 헤더 - 모바일 최적화 */
         .newspaper-header {
             background: #fff;
-            padding: 20px 15px;
+            padding: 15px 10px;
             text-align: center;
             border-bottom: 4px double #000;
             position: fixed;
@@ -38,32 +38,32 @@
         
         .newspaper-title {
             font-family: 'Playfair Display', serif;
-            font-size: 28pt;
+            font-size: 24pt;
             font-weight: 900;
             letter-spacing: -1px;
             color: #000;
-            margin-bottom: 5px;
+            margin-bottom: 3px;
             text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
         }
         
         .newspaper-subtitle {
             font-family: 'Playfair Display', serif;
-            font-size: 10pt;
+            font-size: 9pt;
             font-style: italic;
             color: #666;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
         }
         
         .date-section {
-            padding: 10px 15px;
+            padding: 8px 10px;
             background: #000;
             color: #fff;
-            font-size: 9pt;
+            font-size: 8pt;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: fixed;
-            top: 90px;
+            top: 75px;
             left: 0;
             right: 0;
             z-index: 999;
@@ -72,30 +72,37 @@
         /* 카테고리 네비게이션 */
         .category-nav {
             background: #fff;
-            padding: 15px;
+            padding: 10px;
             overflow-x: auto;
             white-space: nowrap;
             -webkit-overflow-scrolling: touch;
             border-bottom: 2px solid #000;
             position: fixed;
-            top: 165px;
+            top: 105px;
             left: 0;
             right: 0;
             z-index: 998;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        
+        .category-nav::-webkit-scrollbar {
+            display: none;
         }
         
         .category-button {
             display: inline-block;
-            padding: 8px 20px;
-            margin-right: 10px;
+            padding: 6px 15px;
+            margin-right: 8px;
             background: #000;
             color: #fff;
             text-decoration: none;
             font-weight: 600;
-            font-size: 11pt;
+            font-size: 10pt;
             border-radius: 20px;
             transition: all 0.3s ease;
             cursor: pointer;
+            white-space: nowrap;
         }
         
         .category-button.active {
@@ -106,7 +113,7 @@
         
         /* 메인 컨텐츠 - 2열 그리드 추가 */
         .content-wrapper {
-            padding: 235px 10px 20px 10px;
+            padding: 160px 10px 20px 10px;
             min-height: calc(100vh - 150px);
             position: relative;
         }
